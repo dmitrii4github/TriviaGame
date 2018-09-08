@@ -6,3 +6,15 @@ body {
 	line-height: 135%;
 	color:	#777777;
   }
+
+.col-md-11 {
+    margin-left: 4%;
+    margin-right: 4%;
+    background-color: yellow;
+}
+
+h1 {
+    color: blue;
+    padding-top: 8%;
+    align-self: center;
+}
