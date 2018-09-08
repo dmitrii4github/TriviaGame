@@ -5,7 +5,7 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Word Guess Game</title>
+  <title>Trivia Game</title>
 
   <!-- We link our html to the Bootstrap CDN -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -21,6 +21,8 @@
             <h1 align="center">Totally Trivial Trivia!</h1>
             <div class="question">
                 <h2 align="center">Which NBA Team won the most titles in the 90s?</h2>
+                <input type="checkbox" name="team" value="NewYork" onclick="onlyOne(this)">New York Knicks</input>
+                <input type="checkbox" name="team" value="Portland" onclick="onlyOne(this)">Portland Trailblazers</input>
             </div>
         </div>
     </div>
