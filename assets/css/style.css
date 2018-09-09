@@ -27,6 +27,7 @@ h1 {
 
 #answers {
     display: none;
+    margin-left: 43%;
 }
 
 #start_button {
@@ -36,12 +37,17 @@ h1 {
 }
 
 .button_div {
-    margin-left: 40%;
+    margin-left: 45%;
 }
 
 #time_remaining {
     padding-top: 50px;
     padding-bottom: 50px;
-    margin-left: 35%;
+    margin-left: 40%;
+}
+
+.checkboxes {
+    margin-left: 32%;
+    padding-bottom: 30px;
 }
 
