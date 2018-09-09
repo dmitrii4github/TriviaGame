@@ -52,8 +52,9 @@ $(document).ready(function() {
         }  
         
         var unansweredQuestions = 3 - answers;
+        var incorrectAnswers = 3 - unansweredQuestions - correctAnswers;
 
-        $("#questions_answered").text(answers); 
+        $("#questions_answered_incorrectly").text(incorrectAnswers); 
         $("#questions_answered_correctly").text(correctAnswers);
         $("#questions_unanswered").text(unansweredQuestions);         
         $("#questions").hide();
