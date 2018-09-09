@@ -37,6 +37,9 @@ $(document).ready(function() {
     },1000);
 
     $("#done_button").on('click', function() { 
+
+        var answers = $('input[type="checkbox"]:checked').length;
+
         var correctAnswers = 0;
         if ($("#Bulls").is(':checked')) {
             correctAnswers++;
@@ -47,7 +50,7 @@ $(document).ready(function() {
         if ($("#LionKing").is(':checked')) {
             correctAnswers++;
         }  
-
+        $("#questions_answered").text(answers); 
         $("#questions_answered_correctly").text(correctAnswers);        
         $("#questions").hide();
         $("#answers").show();
