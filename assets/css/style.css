@@ -11,6 +11,7 @@ body {
     margin-left: 4%;
     margin-right: 4%;
     background-color: yellow;
+    height: 800px;
 }
 
 h1 {
@@ -26,5 +27,15 @@ h1 {
 
 #answers {
     display: none;
+}
+
+#start_button {
+    height: 70px;
+    width: 120px;
+    margin-top: 20%;
+}
+
+.button_div {
+    margin-left: 40%;
 }
 
