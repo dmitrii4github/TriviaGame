@@ -14,6 +14,13 @@ function onlyOneBand(checkbox) {
     })
 }
 
+function onlyOneSong(checkbox) {
+    var checkboxes = document.getElementsByName('song')
+    checkboxes.forEach((item) => {
+        if (item !== checkbox) item.checked = false
+    })
+}
+
 $(document).ready(function() {
 
     $("#start_button").on('click', function() { 
@@ -32,9 +39,15 @@ $(document).ready(function() {
     $("#done_button").on('click', function() { 
         var correctAnswers = 0;
         if ($("#Bulls").is(':checked')) {
-            alert("Bulls checked");
             correctAnswers++;
-        }   
+        }
+        if ($("#Nirvana").is(':checked')) {
+            correctAnswers++;
+        }  
+        if ($("#LionKing").is(':checked')) {
+            correctAnswers++;
+        }  
+
         $("#questions_answered_correctly").text(correctAnswers);        
         $("#questions").hide();
         $("#answers").show();
