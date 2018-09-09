@@ -21,13 +21,20 @@
             <h1 align="center">Totally Trivial Trivia!</h1>
             <div class="button_div">
                 <button id="start_button">Start</button>
-            <div>
+            </div>
             <div id="questions">
+                <p>Time Remaining: <span id="countdowntimer">20</span> Seconds</p>
                 <div class="question">
                     <h2 align="center">Which NBA Team won the most titles in the 90s?</h2>
                     <input type="checkbox" name="team" value="NewYork" onclick="onlyOne(this)">New York Knicks</input>
                     <input type="checkbox" name="team" value="Portland" onclick="onlyOne(this)">Portland Trailblazers</input>
                 </div>
+                <div class="button_div">
+                    <button id="done_button">Done</button>
+                </div>
+            </div>
+            <div id="answers">
+                <p>Questions answered: <span id="questions_answered">0</span></p>
             </div>
         </div>
     </div>

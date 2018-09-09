@@ -9,22 +9,24 @@ function onlyOne(checkbox) {
 
 $(document).ready(function() {
 
-    
-
-    // var newHTML = '<div class="question">' +
-    //           '<h2 align="center">Which NBA Team won the most titles in the 90s?</h2>' +
-    //           '<input type="checkbox" name="team" value="NewYork" onclick="onlyOne(this)">New York Knicks</input>' +
-    //           '<input type="checkbox" name="team" value="Portland" onclick="onlyOne(this)">Portland Trailblazers</input>' +
-    //           '</div>'
-
     $("#start_button").on('click', function() { 
-    alert("clicked on button");
-    //$("#start_button").replaceWith(newHTML);
     $("#start_button").hide();
     $("#questions").show();
     });
 
+    var timeleft = 20;
+    var downloadTimer = setInterval(function(){
+    timeleft--;
+    document.getElementById("countdowntimer").textContent = timeleft;
+    if(timeleft <= 0)
+        clearInterval(downloadTimer);
+    },1000);
 
+    $("#done_button").on('click', function() {         
+        $("#questions").hide();
+        $("#answers").show();
+        });
+    
 
 
 });
