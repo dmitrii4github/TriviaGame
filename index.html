@@ -28,13 +28,20 @@
                     <h2 align="center">Which NBA Team won the most titles in the 90s?</h2>
                     <input type="checkbox" name="team" value="NewYork" onclick="onlyOne(this)">New York Knicks</input>
                     <input type="checkbox" name="team" value="Portland" onclick="onlyOne(this)">Portland Trailblazers</input>
+                    <input type="checkbox" name="team" value="Chicago" onclick="onlyOne(this)" id="Bulls">Chicago Bulls</input>
+                </div>
+                <div class="question">
+                        <h2 align="center">Which group released the hit "Smells Like a Teen Spirit?"</h2>
+                        <input type="checkbox" name="band" value="Offspring" onclick="onlyOneBand(this)">Offspring</input>
+                        <input type="checkbox" name="band" value="Nirvana" onclick="onlyOneBand(this)" id="Nirvana">Nirvana</input>
+                        <input type="checkbox" name="band" value="No Doubt" onclick="onlyOneBand(this)">Chicago Bulls</input>
                 </div>
                 <div class="button_div">
                     <button id="done_button">Done</button>
                 </div>
             </div>
             <div id="answers">
-                <p>Questions answered: <span id="questions_answered">0</span></p>
+                <p>Questions answered correctly: <span id="questions_answered_correctly">0</span></p>
             </div>
         </div>
     </div>

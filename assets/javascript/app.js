@@ -7,6 +7,13 @@ function onlyOne(checkbox) {
     })
 }
 
+function onlyOneBand(checkbox) {
+    var checkboxes = document.getElementsByName('band')
+    checkboxes.forEach((item) => {
+        if (item !== checkbox) item.checked = false
+    })
+}
+
 $(document).ready(function() {
 
     $("#start_button").on('click', function() { 
@@ -22,7 +29,13 @@ $(document).ready(function() {
         clearInterval(downloadTimer);
     },1000);
 
-    $("#done_button").on('click', function() {         
+    $("#done_button").on('click', function() { 
+        var correctAnswers = 0;
+        if ($("#Bulls").is(':checked')) {
+            alert("Bulls checked");
+            correctAnswers++;
+        }   
+        $("#questions_answered_correctly").text(correctAnswers);        
         $("#questions").hide();
         $("#answers").show();
         });
