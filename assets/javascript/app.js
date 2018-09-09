@@ -50,8 +50,12 @@ $(document).ready(function() {
         if ($("#LionKing").is(':checked')) {
             correctAnswers++;
         }  
+        
+        var unansweredQuestions = 3 - answers;
+
         $("#questions_answered").text(answers); 
-        $("#questions_answered_correctly").text(correctAnswers);        
+        $("#questions_answered_correctly").text(correctAnswers);
+        $("#questions_unanswered").text(unansweredQuestions);         
         $("#questions").hide();
         $("#answers").show();
         });
