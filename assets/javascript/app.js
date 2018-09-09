@@ -32,12 +32,17 @@ $(document).ready(function() {
     var downloadTimer = setInterval(function(){
     timeleft--;
     document.getElementById("countdowntimer").textContent = timeleft;
-    if(timeleft <= 0)
+    if(timeleft <= 0) {
         clearInterval(downloadTimer);
+        allDone();
+    }
     },1000);
 
     $("#done_button").on('click', function() { 
-
+        allDone();        
+        });
+    
+    function allDone() {
         var answers = $('input[type="checkbox"]:checked').length;
 
         var correctAnswers = 0;
@@ -59,8 +64,6 @@ $(document).ready(function() {
         $("#questions_unanswered").text(unansweredQuestions);         
         $("#questions").hide();
         $("#answers").show();
-        });
-    
-
+    }
 
 });
